@@ -1,0 +1,52 @@
+@media only screen and (max-width:520px) {
+    
+    .containor{
+            color:white;
+            transition: 1s;    
+            margin:50px 0 0px 10px;
+            height: 100%;
+            width: 100vw;
+            display: grid;
+            grid-template-columns:0.5fr 0.5fr 0fr;
+            grid-template-rows:1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.5fr 1.2fr 1.2fr 1.5fr 1.2fr 1.2fr 1.5fr 1.3fr;
+            grid-template-areas:
+            "Heading null1 users"
+            "mail calender null"
+            "internet store null" 
+            "desktop desktop null"
+            "map sky null"
+            "massage finance null"
+            "sports sports null"
+            "people  weather null"
+            "news photo null"
+            "bingpic bingpic null"
+            " travel  travel null"
+            "game camera null"
+            " music video null"    
+            }
+            
+        }
+    
+    @media only screen and (min-width: 520px){
+        
+    .containor{
+    
+            color:white;
+            transition: 1s;    
+            margin:100px 5px 0 40px;
+            height: 90vh;
+            display: grid;
+            grid-gap: 0.4rem;
+            grid-template-columns : 1fr 1fr 0.5fr 0.5fr 0.125fr 0.5fr 0.5fr 0.25fr;
+            grid-template-rows: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
+            grid-template-areas:
+            "Heading Heading Heading Heading Heading null null users"  
+            "mail calender internet store none bingpic bingpic null1"
+            "people photo map sky none travel travel null1"
+            "massage finance sports sports none game camera null1"
+            "desktop weather news news none music video null1"
+            ;
+        
+    }
+    }
+    

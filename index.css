@@ -1,0 +1,882 @@
+*{
+    margin: 0;padding: 0;
+}
+
+body{
+    background-color: #4e24a3;
+}
+.maincontainer{
+    width: 100%;height: 100vh;    
+    color: white;
+    
+}    
+
+.containor{
+        color:white;
+        transition: 1s;    
+        margin:100px 5px 0 40px;
+        height: 90vh;
+        display: grid;
+        grid-gap: 0.2rem;   
+        grid-template-columns : 0.15fr 1fr 0.5fr 0.5fr 0.125fr 0.5fr 0.5fr 0.25fr;
+        grid-template-rows: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
+        grid-template-areas:
+        "Heading Heading Heading Heading Heading null null users"  
+        "mail calender internet store none bingpic bingpic null1"
+        "people photo map sky none travel travel null1"
+        "massage finance sports sports none game camera null1"
+        "desktop weather news news none music video null1"
+        ;
+    
+}
+
+span {
+    color: white;
+    margin-top: 12px;
+    font-size: 150;
+}
+div{
+    color: white;
+}
+h1{
+    color: #000;
+}
+h2{color: #000;}
+p{
+    color: #000;
+}
+.null{
+    background: transparent;
+    grid-area: null;
+    transition: 1s;
+}
+.null1{
+    background: transparent;
+    grid-area: null1;
+    transition: 1s;
+}
+.start{
+    background:transparent;
+    grid-area:Heading;
+    font-size: 5vh;
+    font-family: serif;
+    text-transform: uppercase;
+    transition: 1s;
+    
+    
+}
+.users{
+    background: transparent;
+    grid-area: users;
+    font-size:4vh;
+    text-align: center;
+    transition: 1s;
+    margin-bottom: 10px;
+    padding-top:40% ;
+    padding-left:30% ;
+}
+/* mail */
+.mail{
+    background-color:transparent;
+    perspective: 1000px;
+    grid-area: mail;
+    transition: 1s;
+}
+.mail-flip-con{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.mail:hover .mail-flip-con{
+    transform: rotateY(180deg);
+    transition:width,2s ease-in-out;
+}
+.mail-flip-front, .mail-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.mail-flip-front{
+    background-color: #51bfd3;
+    color: #000;
+}
+.mail-flip-back{
+    background-color: #8feeff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+
+/*calender  */
+
+
+.calender{
+    background-color:transparent;
+    transition: 1s;
+    perspective: 1000px;
+    grid-area: calender;
+}
+.calender-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.calender:hover .calender-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.calender-flip-front, .calender-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.calender-flip-front{
+    background-color: #6e2cd1;
+    color: #000;
+}
+.calender-flip-back{
+    background-color:  #a162ff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+
+/*internet  */
+
+.internet{
+    background-color: transparent;
+    transition: 1s;
+    perspective: 1000px;
+    grid-area:internet;
+}
+.internet-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.internet:hover .internet-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.internet-flip-front, .internet-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.internet-flip-front{
+    background-color: #69a9e6;
+    color: #000;
+}
+.internet-flip-back{
+    background-color: #99ceff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* store */
+.store{
+    background-color: transparent;
+    transition: 1s;
+    perspective: 1000px;
+}
+.store-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.store:hover .store-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.store-flip-front, .store-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.store-flip-front{
+    background-color: #4a8f35;
+    color: #000;
+}
+.store-flip-back{
+    background-color: #8fff6d;
+    color:white;
+    transform: rotateY(180deg);
+}
+/* people */ 
+.people{
+    background-color:transparent;
+    grid-area: people;
+    
+    transition: 1s;
+    perspective: 1000px;
+    
+}
+.people-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.people:hover .people-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.people-flip-front, .people-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.people-flip-front{
+    background-color: #a75120;
+    color: #000;
+}
+.people-flip-back{
+    background-color: #f59259;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* photo */
+.photo{
+    background-color: transparent;
+    grid-area: photo;
+    transition: 1s;
+    perspective: 1000px;
+    
+}
+.photo-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.photo:hover .photo-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.photo-flip-front, .photo-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.photo-flip-front{
+    background-color: #51bfd3;
+    color: #000;
+}
+.photo-flip-back{
+    background-color:#92efff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* maps */
+.maps{
+    background-color:transparent;
+    grid-area: map;
+  perspective: 1000px;
+  transition: 1s;
+}
+.maps-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.maps:hover .maps-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.maps-flip-front, .maps-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.maps-flip-front{
+    background-color:  #692f99;
+    color: #000;
+}
+.maps-flip-back{
+    background-color:  #bf70ff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* sky */
+.sky{
+    background-color: transparent;
+    grid-area: sky;
+    
+    perspective: 1000px;
+    transition: 1s;
+    
+}
+.sky-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.sky:hover .sky-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.sky-flip-front, .sky-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.sky-flip-front{
+    background-color: #465dc7;
+    color: #000;
+}
+.sky-flip-back{
+    background-color: #6884ff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* message */
+.massage{
+    background-color:transparent;
+    transition: 1s;
+    perspective: 1000px;
+    grid-area: massage;
+}
+
+.massage-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.massage:hover .massage-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.massage-flip-front, .massage-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.massage-flip-front{
+    background-color: #511db9;
+    color: #000;
+}
+.massage-flip-back{
+    background-color: #8a50ff;
+    color:white;
+    transform: rotateY(180deg);
+}
+/* finance */
+.finance{
+    background-color: transparent;
+    
+    perspective: 1000px;
+    grid-area: finance;
+    transition: 1s;
+    
+}
+.finance-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.finance:hover .finance-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.finance-flip-front, .finance-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.finance-flip-front{
+    background-color: #4a8f35;
+    color: #000;
+}
+.finance-flip-back{
+    background-color: #8fff6d;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+    /* sports */
+.sports{
+    background-color: transparent;
+  ;
+    perspective: 1000px;
+    grid-area: sports;
+    transition: 1s;
+    
+}
+.sports-flip-con{
+    position: relative;
+   height: 100%;
+   width: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.sports:hover .sports-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.sports-flip-front, .sports-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.sports-flip-front{
+    background-color: #6e2cd1;
+    color: #000;
+}
+.sports-flip-back{
+    background-color: #934bff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* desktop */
+.desktop{
+    background-color: transparent;
+    
+    perspective: 1000px;
+    grid-area: desktop;
+    transition: 1s;
+    
+}
+.desktop-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.desktop:hover .desktop-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.desktop-flip-front, .desktop-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.desktop-flip-front{
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/13/23/06/tree-6792528_960_720.jpg);
+    color: #000;
+}
+.desktop-flip-back{
+    background-image: url(https://media.istockphoto.com/photos/beautiful-sunrise-over-the-sea-picture-id610041376?k=20&m=610041376&s=612x612&w=0&h=JoEPWYoq1-FN5ANIQHNNdI2XrRDYnPCUWuLOHMrgLnE=);
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* weather */
+.weather{
+    background-color: transparent;
+   
+    perspective: 1000px;    
+    grid-area: weather;
+    transition: 1s;
+    
+}
+.weather-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.weather:hover .weather-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.weather-flip-front, .weather-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.weather-flip-front{
+    background-color: #69a9e6;
+    color: #000;
+}
+.weather-flip-back{
+    background-color: #97cdff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* news */
+.news{
+    background-color:transparent;
+  
+    perspective: 1000px;
+    grid-area: news;
+    transition: 1s;
+    
+}
+.news-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.news:hover .news-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.news-flip-front, .news-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.news-flip-front{
+    background-color:  #741919;
+    color: #000;
+}
+.news-flip-back{
+    background-color:  #fd5757;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* bingpic */
+.bingpic{
+    background-color: transparent;
+    grid-area:bingpic;
+  
+    perspective: 1000px;
+    transition: 1s;
+}
+.bingpic-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.bingpic:hover .bingpic-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.bingpic-flip-front, .bingpic-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.bingpic-flip-front{
+    background-image: url(https://media.istockphoto.com/photos/butterflies-picture-id1201252148?k=20&m=1201252148&s=612x612&w=0&h=DqmSxEbFmB-ECunrW3eheED18pGoYOU6H4u-NQ_WT5E=);
+    color: #000;
+}
+.bingpic-flip-back{
+    background-image: url(https://media.istockphoto.com/photos/iceberg-with-its-visible-and-underwater-or-submerged-parts-floating-picture-id1264160353?k=20&m=1264160353&s=612x612&w=0&h=aXfvgjOEvLekxZqIpbJByj80OLYx0esPjJ2jwyi-fUk=);
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* travel */
+.travel{
+    background-color: transparent;
+ 
+    perspective: 1000px;
+    grid-area: travel;
+    transition: 1s;
+}
+.travel-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.travel:hover .travel-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.travel-flip-front, .travel-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.travel-flip-front{
+    background-color: #2a98ac;
+    color: #000;
+}
+.travel-flip-back{
+    background-color: #2a98ac;
+    color:white;
+    transform: rotateY(180deg);
+}
+ /* game */ 
+.game{
+    background-color: transparent;
+
+    perspective: 1000px;
+    grid-area: game;
+    transition: 1s;
+    
+}
+.game-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.game:hover .game-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.game-flip-front, .game-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.game-flip-front{
+    background-color: #4a8f35;
+    color: #000;
+}
+.game-flip-back{
+    background-color: #8fff6d;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* camera */
+.camera{
+    background-color: transparent;
+ 
+    perspective: 1000px;
+    grid-area: camera;
+    transition: 1s;
+    
+}
+.camera-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.camera:hover .camera-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.camera-flip-front, .camera-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.camera-flip-front{
+    background-color: #692f99;
+    color: #000;
+}
+.camera-flip-back{
+    background-color: #b65dff;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* music */
+.music{
+    background-color: transparent;
+    perspective: 1000px;
+    grid-area: music;
+    transition: 1s;
+    
+}
+.music-flip-con{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.music:hover .music-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.music-flip-front, .music-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.music-flip-front{
+    background-color: #a75120;
+    color: #000;
+}
+.music-flip-back{
+    background-color:#ffa06a;
+    color:white;
+    transform: rotateY(180deg);
+}
+
+/* video */
+.video{
+    background-color: transparent;
+    
+    perspective: 1000px;
+    grid-area: video;
+    transition: 1s;
+    
+}
+.video-flip-con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transfrom 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0.4px 8px 0 rgda(0,0,0,0.2);
+}
+.video:hover .video-flip-con{
+    transform: rotateY(180deg);
+    transition:width,3s ease-out;
+}
+.video-flip-front, .video-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+.video-flip-front{
+    background-color: #741919;
+    color: #000;
+}
+.video-flip-back{
+    background-color: #ff7a7a;
+    color:white;
+    transform: rotateY(180deg);
+}
